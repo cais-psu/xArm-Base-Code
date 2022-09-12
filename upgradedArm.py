@@ -12,8 +12,7 @@ class upgradedArm(XArmAPI):
     def __init__(self, port=None, is_radian=False, do_not_open=False, **kwargs):
         super().__init__(port, is_radian, do_not_open, **kwargs)
 
-    def set_pose(self, pose, speed=100, mvacc = 1000, wait=False, mvtime=None, radius=None, relative=None,\
-                 is_radian=False, timeout=None):
+    def set_pose(self, pose, speed=100, mvacc = 1000, wait=False, mvtime=None, radius=None, relative=None, is_radian=False, timeout=None):
         """
         :param pose: (dict[str|num]): Pose to move to
         :param radius: move radius, if radius is None or radius less than 0, will MoveLine, else MoveArcLine

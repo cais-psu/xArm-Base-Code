@@ -16,7 +16,7 @@ import transformer
 #import keyboard
 from upgradedArm import upgradedArm
 import tempFinder
-
+import Stepper_Motor_Code
 try:
     from xarm.tools import utils
 except:
@@ -48,7 +48,9 @@ arm.motion_enable(enable=True)
 
 arm.reset(wait=True)
 
-arm.run_gcode_file("G8 F50 Q0 T50")
+#Stepper_Motor_Code.stepper_motor(10, 100)
+
+arm.set_cgpio_digital(1, 1, 1000)
 
 arm.reset(wait=True)
 arm.disconnect()
