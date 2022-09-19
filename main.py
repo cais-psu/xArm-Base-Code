@@ -4,12 +4,11 @@
 
 import sys
 import math
-import time
+from time import sleep
 import datetime
 import random
 import traceback
 import threading
-
 #import Robot as Robot
 import requests
 import transformer
@@ -48,9 +47,8 @@ arm.motion_enable(enable=True)
 
 arm.reset(wait=True)
 
-#Stepper_Motor_Code.stepper_motor(10, 100)
 
-arm.set_cgpio_digital(1, 1, 1000)
+Stepper_Motor_Code.Motor(10, 3000)
 
 arm.reset(wait=True)
 arm.disconnect()
